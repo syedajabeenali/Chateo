@@ -1,0 +1,80 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="PxUsage"
+    android:padding="16dp">
+
+    <!--First Image-->
+    <ImageView
+        android:id="@+id/front_image1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/container"
+        android:layout_marginStart="62px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/front_image2"
+        app:layout_constraintBottom_toTopOf="@id/tv_frontpg_tag1"
+        tools:ignore="ContentDescription" />
+
+    <!--Second Image-->
+    <ImageView
+        android:id="@+id/front_image2"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:src="@drawable/front_image"
+        app:layout_constraintStart_toEndOf="@+id/front_image1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <!--First Tag-->
+    <TextView
+        android:id="@+id/tv_frontpg_tag1"
+        android:layout_width="280dp"
+        android:layout_height="90dp"
+        android:fontFamily="@font/mulish_extrabold"
+        android:text="@string/front_page_tag"
+        android:textAlignment="center"
+        android:textColor="#0F1828"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_frontpg_tag2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/front_image1"
+        tools:ignore="TextSizeCheck" />
+
+    <!--Second Tag-->
+    <TextView
+        android:id="@id/tv_frontpg_tag2"
+        android:layout_width="148dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/mulish_semibold"
+        android:text="@string/terms_amp_privacy_policy"
+        android:textColor="#0F1828"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_frontpg_tag1"
+        tools:ignore="TextSizeCheck" />
+
+
+    <!--Start Messaging Button-->
+    <Button
+        android:id="@+id/bt_startMessaging"
+        android:layout_width="327dp"
+        android:layout_height="60dp"
+        android:text="@string/start_messaging"
+        android:textColor="#F7F7FC"
+        android:textSize="16sp"
+        android:backgroundTint="#002DE3"
+        android:fontFamily="@font/mulish_semibold"
+        app:layout_constraintTop_toBottomOf="@id/tv_frontpg_tag2"
+        app:layout_constraintStart_toStartOf="@id/tv_frontpg_tag2"
+        app:layout_constraintEnd_toEndOf="@id/tv_frontpg_tag2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="VisualLintButtonSize" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,94 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="327dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginHorizontal="35dp">
+
+    <!-- Profile Image -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profile_pic"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/profile_image_shape"
+        android:src="@drawable/profile_pic"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_user_name"
+        tools:ignore="ContentDescription" />
+
+
+    <!-- User Name -->
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/user_name"
+        android:textSize="16sp"
+        android:padding="5dp"
+        android:textColor="#0F1828"
+        android:fontFamily="@font/mulish_extrabold"
+        app:layout_constraintHorizontal_weight="3"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toStartOf="@id/tv_message_date"
+        app:layout_constraintStart_toEndOf="@id/profile_pic"
+        app:layout_constraintTop_toTopOf="@id/profile_pic"
+        />
+
+    <!-- Message date-->
+    <TextView
+        android:id="@+id/tv_message_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_light"
+        android:text="@string/message_day"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:textColor="#ADB5BD"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_user_name"
+        app:layout_constraintTop_toTopOf="@id/tv_user_name"
+        app:layout_constraintBottom_toTopOf="@id/message_count"/>
+
+    <!-- Message -->
+    <TextView
+        android:id="@+id/tv_Message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_light"
+        android:text="@string/message"
+        android:textSize="14sp"
+        android:padding="5dp"
+        android:textColor="#ADB5BD"
+        app:layout_constraintEnd_toStartOf="@id/message_count"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintStart_toStartOf="@id/tv_user_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_user_name" />
+
+
+    <!-- Message Count -->
+    <TextView
+        android:id="@+id/message_count"
+        android:layout_width="22dp"
+        android:layout_height="20dp"
+        android:background="@drawable/message_count_shape"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/message_count"
+        android:textAlignment="center"
+        android:textColor="#001A83"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tv_message_date"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/tv_Message"
+        app:layout_constraintTop_toBottomOf="@id/tv_message_date"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
